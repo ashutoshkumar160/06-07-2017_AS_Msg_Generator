@@ -18,7 +18,7 @@ public class MsgGenerator {
 	private KafkaTemplate<String, Car> temp;
 
 	public void sendMsg(Car car) {
-		LOGGER.info("sending car='{}'", car.toString());
+		LOGGER.info("sending car='{}'", car/* .toString() */);
 		temp.send(jsonTopic, car);
 	}
 }
